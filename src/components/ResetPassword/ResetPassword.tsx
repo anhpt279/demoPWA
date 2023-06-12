@@ -70,14 +70,14 @@ export const ResetPassword: FC<HTMLAttributes<HTMLDivElement>> = (
   const handeleInputChange = (e: any) => {
     e.preventDefault();
     setValue(e.target.value);
-    errors.password = false;
-    errors.password_repeat = false;
+    // errors.password = false;
+    // errors.password_repeat = false;
   };
   const handeleInputConfimChange = (e: any) => {
     e.preventDefault();
     setValueConfim(e.target.value);
-    errors.password = false;
-    errors.password_repeat = false;
+    // errors.password = false;
+    // errors.password_repeat = false;
   };
 
   return (
@@ -120,7 +120,9 @@ export const ResetPassword: FC<HTMLAttributes<HTMLDivElement>> = (
               )}
             </div>
 
-            <div className={classes.validate}>{errors.password?.message}</div>
+            <div className={classes.validate}>
+              {/* {errors.password?.message} */}
+            </div>
           </div>
           <div>
             <label htmlFor="">Confirm new Password</label>
@@ -150,7 +152,7 @@ export const ResetPassword: FC<HTMLAttributes<HTMLDivElement>> = (
             </div>
 
             <div className={classes.validate}>
-              {errors.password_repeat?.message}
+              {/* {errors.password_repeat?.message} */}
             </div>
           </div>
         </div>

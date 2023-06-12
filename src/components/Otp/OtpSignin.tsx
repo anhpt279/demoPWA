@@ -48,7 +48,7 @@ export const OtpSignin: FC<
     } else {
       setRenderText("Didn't receive code?");
     }
-    errors.otp = false;
+    // errors.otp = false;
   };
   return (
     <div className={classes.root}>
@@ -78,7 +78,7 @@ export const OtpSignin: FC<
             isNumberInput={true}
             autoFocus
             onChangeOTP={(otp) => handleOnchange(otp)}
-            onChange={() => (errors.otp = false)}
+            onChange={() => {}}
             className={classes.inputs}
             inputClassName={clsx(
               classes.input,

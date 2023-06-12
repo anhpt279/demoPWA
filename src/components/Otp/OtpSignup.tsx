@@ -46,7 +46,7 @@ export const OtpSignup: FC<HTMLAttributes<HTMLDivElement>> = (props: any) => {
     } else {
       setRenderText("Didn't receive code?");
     }
-    errors.otp = false;
+    // errors.otp = false;
   };
   const phone = state.username.slice(5).padStart(10, "x");
 
@@ -78,7 +78,10 @@ export const OtpSignup: FC<HTMLAttributes<HTMLDivElement>> = (props: any) => {
             isNumberInput={true}
             autoFocus
             onChangeOTP={(otp) => handleOnchange(otp)}
-            onChange={() => (errors.otp = false)}
+            onChange={
+              () => {}
+              // (errors.otp = false)
+            }
             className={classes.inputs}
             inputClassName={clsx(
               classes.input,
