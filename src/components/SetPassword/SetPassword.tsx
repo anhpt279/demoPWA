@@ -1,19 +1,19 @@
+import { yupResolver } from "@hookform/resolvers/yup";
+import clsx from "clsx";
 import React, { FC, HTMLAttributes, useContext } from "react";
 import { useForm } from "react-hook-form";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import Images from "src/assets/images";
+import * as Yup from "yup";
+import { UserCtx } from "../../contexts/users/UserCtx";
 import { Button } from "../Buttons";
 import { useStyles } from "./SetPassword.style";
-import { yupResolver } from "@hookform/resolvers/yup";
-import * as Yup from "yup";
-import clsx from "clsx";
-import { UserCtx } from "../../contexts/users/UserCtx";
 
 export const SetPassword: FC<HTMLAttributes<HTMLDivElement>> = (props: any) => {
   const classes = useStyles();
   const navigate = useNavigate();
   const { state }: any = useLocation();
-  const { usersData, signups } = useContext(UserCtx);
+  const { signups } = useContext(UserCtx);
   const [type, setType] = React.useState<string>("password");
   const [typeConfim, setTypeConfim] = React.useState<string>("password");
   const [isActive, setIsActive] = React.useState<boolean>(false);

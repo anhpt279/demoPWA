@@ -1,5 +1,5 @@
 import { createUseStyles } from "react-jss";
-import DEFAULT_THEME from "src/themes/theme";
+// import DEFAULT_THEME from "src/themes/theme";
 
 export const useStyles = createUseStyles(() => ({
   root: {

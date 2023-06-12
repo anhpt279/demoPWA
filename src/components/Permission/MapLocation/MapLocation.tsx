@@ -12,7 +12,6 @@ import {
   key,
 } from "../../../clients/getGps";
 import { PermissionContext } from "../../../contexts/location/permissionCtx";
-import Marker from "../../common/Map/Marker";
 import GoogleMap from "../../common/Map/GoogleMap";
 import usePlacesService from "react-google-autocomplete/lib/usePlacesAutocompleteService";
 import MapAutoComplete from "../../ProfileLocation/ProfileMap/MapAutoComplete/MapAutoComplete";

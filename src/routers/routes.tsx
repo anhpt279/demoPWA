@@ -13,7 +13,7 @@ import EmptyCart from "src/pages/EmptyCart/EmptyCart";
 import SuccessfulOrder from "src/components/SuccessfulOrder/SuccessfulOrder";
 import Successfull from "src/components/SetPassword/Successfull/Successfull";
 import Groceries from "src/components/Groceries/Groceries";
-import ActivitiesInfo from "../components/Activities/ActivitiesInfo/ActivitiesInfo";
+// import ActivitiesInfo from "../components/Activities/ActivitiesInfo/ActivitiesInfo";
 import DeleteAccount from "../components/DeleteAccount/DeleteAccount";
 
 const SignInPage = React.lazy(() => import("src/components/SignIn/SignIn"));

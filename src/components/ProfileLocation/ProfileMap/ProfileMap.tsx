@@ -1,33 +1,32 @@
+import clsx from "clsx";
 import React, {
-  useEffect,
-  useState,
-  useContext,
   FC,
   HTMLAttributes,
+  useContext,
+  useEffect,
   useLayoutEffect,
+  useState,
 } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
-import IconSearch from "../../../assets/icons/search-normal.svg";
-import { useStyles } from "./ProfileMap.style";
-import PageLayout from "src/components/PageLayout/PageLayout";
-import clsx from "clsx";
+import { useLocation, useNavigate } from "react-router-dom";
 import Images from "src/assets/images";
 import { Button } from "src/components/Buttons";
+import PageLayout from "src/components/PageLayout/PageLayout";
+import IconSearch from "../../../assets/icons/search-normal.svg";
 import {
-  key,
   getCoordsForAddress,
   getGeologicalAddress,
+  key,
 } from "../../../clients/getGps";
+import { useStyles } from "./ProfileMap.style";
 
 import usePlacesService from "react-google-autocomplete/lib/usePlacesAutocompleteService";
-import Marker from "../../common/Map/Marker";
-import GoogleMap from "../../common/Map/GoogleMap";
-import { PermissionContext } from "../../../contexts/location/permissionCtx";
 import arrowLeft from "src/assets/icons/Vector.png";
-import MapAutoComplete from "./MapAutoComplete/MapAutoComplete";
-import { IAuthCtx } from "../../../contexts/users/types";
-import { UserCtx } from "../../../contexts/users/UserCtx";
 import { ReactComponent as LocationMap } from "../../../assets/icons/location-map.svg";
+import { PermissionContext } from "../../../contexts/location/permissionCtx";
+import { UserCtx } from "../../../contexts/users/UserCtx";
+import { IAuthCtx } from "../../../contexts/users/types";
+import GoogleMap from "../../common/Map/GoogleMap";
+import MapAutoComplete from "./MapAutoComplete/MapAutoComplete";
 
 export const ProfileMap: FC<HTMLAttributes<HTMLDivElement>> = (props: any) => {
   const { location, setLocation } = useContext(PermissionContext);
@@ -39,7 +38,7 @@ export const ProfileMap: FC<HTMLAttributes<HTMLDivElement>> = (props: any) => {
   const [address, setAddress] = useState<string>("");
   const [renderAddress, setRenderAddress] = useState<string>("");
   const [gps, setGps] = React.useState<any>([21.0342994, 105.8172407]);
-  const [isOpen, setIsOpen] = React.useState<boolean>(true);
+  const [isOpen] = React.useState<boolean>(true);
   const addressTitle = renderAddress?.split(", ")?.slice(0, 2)?.join(", ");
   const navigate = useNavigate();
   const { userSpecificData, updateCurrentUser } = useContext<IAuthCtx>(UserCtx);
