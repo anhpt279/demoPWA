@@ -1,0 +1,161 @@
+import { createUseStyles } from "react-jss";
+import DEFAULT_THEME from "src/themes/theme";
+
+export const useStyles = createUseStyles({
+  root: {
+    width: "100%",
+    display: "grid",
+    gridTemplateColumns: "1fr 1fr",
+    gridAutoRows: "minmax(auto, auto)",
+    gridGap: 8,
+  },
+  item: {
+    height: "fit-content",
+  },
+  itemCard: {
+    padding: 8,
+    position: "relative",
+    borderRadius: 8,
+  },
+  imgProduct: {
+    width: "100%",
+    height: "auto",
+  },
+  discount: {
+    position: "absolute",
+    top: 8,
+    left: 8,
+    color: DEFAULT_THEME.theme.palette.text.default,
+    borderRadius: 4,
+    padding: "2px 8px",
+    fontSize: 12,
+    lineHeight: "16px",
+    fontWeight: 400,
+  },
+  btnPlus: {
+    position: "absolute",
+    bottom: 0,
+    right: 0,
+    backgroundColor: "transparent",
+  },
+  quantity: {
+    position: "absolute",
+    bottom: 4,
+    backgroundColor: DEFAULT_THEME.theme.palette.background.onBoarding,
+    color: DEFAULT_THEME.theme.palette.text.default,
+    right: 0,
+    padding: 12,
+    borderRadius: "50%",
+    width: 44,
+    height: 44,
+  },
+  btnPlusProduct: {
+    position: "absolute",
+    bottom: 4,
+    backgroundColor: DEFAULT_THEME.theme.palette.background.onBoarding,
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-between",
+    color: DEFAULT_THEME.theme.palette.text.default,
+    width: "100%",
+    minWidth: 44,
+    borderRadius: 32,
+    paddingLeft: 8,
+    marginLeft: -8,
+    "&>div": {
+      width: 24,
+      height: 24,
+    },
+  },
+  itemCardContent: {
+    "&>p:first-child": {
+      color: DEFAULT_THEME.theme.palette.text.title,
+      fontSize: 14,
+      lineHeight: "24px",
+      fontWeight: 600,
+      minHeight: 48,
+    },
+  },
+  itemCardPrice: {
+    display: "flex",
+    alignItems: "center",
+    minHeight: 44,
+  },
+  priceSale: {
+    color: DEFAULT_THEME.theme.palette.error.main,
+    fontSize: 16,
+    lineHeight: "24px",
+    fontWeight: 600,
+    paddingRight: 8,
+  },
+  price: {
+    color: DEFAULT_THEME.theme.palette.text.title,
+    fontSize: 12,
+    lineHeight: "16px",
+    fontWeight: 400,
+    textDecoration: "line-through",
+  },
+  claimed: {
+    width: "100%",
+    height: "auto",
+    color: DEFAULT_THEME.theme.palette.error.main,
+  },
+  processWrapper: {
+    width: "100%",
+    height: 8,
+    backgroundColor: DEFAULT_THEME.theme.palette.background.process,
+    borderRadius: 6,
+  },
+  process: {
+    width: "29%",
+    height: 8,
+    borderRadius: 6,
+    backgroundColor: DEFAULT_THEME.theme.palette.error.main,
+  },
+  processInfor: {
+    display: "flex",
+    alignItems: "center",
+    fontSize: 12,
+    lineHeight: "16px",
+    fontWeight: 400,
+  },
+  bgRed: {
+    backgroundColor: DEFAULT_THEME.theme.palette.error.main,
+  },
+  bgGreen: {
+    backgroundColor: DEFAULT_THEME.theme.palette.background.green,
+  },
+  bgWarning: {
+    backgroundColor: DEFAULT_THEME.theme.palette.background.warning,
+  },
+  img: {
+    width: "150px",
+    height: "150px",
+    borderRadius: "15px",
+  },
+  name: {
+    width: "100%",
+    height: "40px",
+    marginTop: "8px",
+    borderRadius: "8px",
+  },
+  prices: {
+    width: "100%",
+    height: "36px",
+    marginTop: "4px",
+    marginBottom: "4px",
+    borderRadius: "8px",
+  },
+  processs: {
+    width: "100%",
+    height: "8px",
+    marginTop: "16px",
+    marginBottom: "4px",
+    borderRadius: "8px",
+  },
+  claimes: {
+    width: "100%",
+    height: "8px",
+    borderRadius: "8px",
+  },
+});

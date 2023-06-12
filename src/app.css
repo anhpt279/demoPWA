@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: "Inter", sans-serif;
+  vertical-align: baseline;
+  box-sizing: border-box;
+  /* scroll-behavior: smooth; */
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.negativeMargin4 {
+  margin-left: -4 !important;
+}
+.card_text_14 {
+  font-size: 14;
+  line-height: "16px";
+}
+.card_text_14 p {
+  font-weight: 400;
+  color: "#6B7280";
+}
+.card_text_14 p:first-child {
+  font-weight: 600;
+  color: "#374151";
+}
+.card_text_14 {
+  line-height: "24px";
+  font-size: 14;
+  line-height: "16px";
+  color: "#6B7280";
+}
+.highlight {
+  font-weight: 800;
+}
+.mb8 {
+  margin-bottom: 8px !important;
+}
+.mb16 {
+  margin-bottom: 16px !important;
+}
+.mb32 {
+  margin-bottom: 32px !important;
+}
+.mt8 {
+  margin-top: 8px !important;
+}
+.mt16 {
+  margin-top: 16px !important;
+}
+.mb8 {
+  margin-bottom: 8px !important;
+}
+.mt16 {
+  margin-top: 16px !important;
+}
+.mt32 {
+  margin-top: 32px !important;
+}
+.pb16 {
+  padding-bottom: 16px !important;
+}
+.mr8 {
+  margin-right: 8px !important;
+}
+.mr16 {
+  margin-right: 16px !important;
+}
+.mr32 {
+  margin-right: 32px !important;
+}
+.spinner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #00b285;
+  border-radius: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 2s ease;
+}
+.spinner::after,
+.spinner::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #00b285;
+  border-radius: 50%;
+  top: 0px;
+  transition: all 2s ease;
+}
+.spinner::before {
+  left: calc(-1 * (0.5rem + 0.5rem / 2));
+}
+.spinner::after {
+  left: calc(0.5rem + 0.5rem / 2);
+}
+@keyframes glow {
+  0% {
+    background-color: transparent;
+  }
+  50% {
+    background-color: #00b285;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+.spinner-blink {
+  animation-name: glow;
+  animation-duration: 1.5s;
+  animation-delay: 0.3s;
+  animation-iteration-count: infinite;
+  transition: all 2s ease;
+}
+.spinner-blink::before {
+  animation-name: glow;
+  animation-duration: 1.5s;
+  animation-delay: 0.2s;
+  animation-iteration-count: infinite;
+  transition: all 2s ease;
+}
+.spinner-blink::after {
+  animation-name: glow;
+  animation-duration: 1.5s;
+  animation-delay: 0.4s;
+  animation-iteration-count: infinite;
+  transition: all 2s ease;
+}
+.row {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.homeTitle {
+  color: #374151;
+  font-weight: 700;
+  font-size: 18px !important;
+  line-height: 24px !important;
+}
+
+.pac-icon {
+  background: url("https://img.freepik.com/premium-vector/pin-point-icon-with-red-map-location-pointer-symbol-isolated-white-background_120819-234.jpg?w=740")
+    no-repeat center;
+  background-size: 20px;
+  background-color: "red";
+}

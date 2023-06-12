@@ -1,0 +1,1 @@
+export { ListRecommendFood } from "./ListRecommendFood";

@@ -1,0 +1,1 @@
+export { RenderOTP } from "./OTPRender";

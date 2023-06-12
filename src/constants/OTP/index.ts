@@ -1,0 +1,6 @@
+export enum OTP {
+  UPPER_A_KEYCODE = 65,
+  LOWER_Z_KEYCODE = 122,
+  ZERO_KEYCODE = 48,
+  NINE_KEYCODE = 57,
+}
